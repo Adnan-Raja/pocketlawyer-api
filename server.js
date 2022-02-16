@@ -53,46 +53,14 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
-const widgetsRoutes = require("./routes/widgets");
-const allQuizRoutes = require("./routes/allquiz-router");
-const createQuiz = require("./routes/createquiz-router");
-const myquiz = require("./routes/myquiz-router");
-const createQuizForm = require("./routes/createquiz_form-router");
-const searchRoutes = require("./routes/searchresults");
-const createQuestionForm = require("./routes/createquestion-router");
-const goToQuizPage = require("./routes/gotoquizpage")
-const goToResultsPage= require("./routes/gotoresultspage")
+// const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
-app.use("/api/widgets", widgetsRoutes(db));
+//app.use("/api/widgets", widgetsRoutes(db));
 
 // Homepage receive all quiz routes
-app.use("/", allQuizRoutes(db));
-
-// Create Myquiz page
-app.use("/myquiz", myquiz(db));
-
-// Create quiz page
-app.use("/createquiz", createQuiz(db));
-
-// Create quiz post
-app.use("/quiz", urlencodedParser, createQuizForm(db));
-
-//Go To Quiz Page
-app.use("/quizpage", goToQuizPage(db));
-
-// Go To Results Page
-app.use("/results", goToResultsPage())
-
-// Create Search Results page
-app.use("/searchresults", searchRoutes(db));
-
-// Create question
-app.use("/newquestion", urlencodedParser, createQuestionForm(db));
-
-// Attempt quiz
-//app.use("/quizattempt", urlencodedParser, quizattempt(db));
+//app.use("/", allQuizRoutes(db));
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
