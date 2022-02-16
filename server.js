@@ -36,7 +36,6 @@ db.connect();
 //         The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
 app.use(morgan("dev"));
 
-app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
@@ -53,10 +52,18 @@ app.use(express.static("public"));
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const usersRoutes = require("./routes/users");
+const lawyersRoutes = require("./routes/lawyers");
+const conversationRoutes = require("./routes/conversation");
+const questionsRoutes = require("./routes/questions");
+const conversationsRoutes = require("./routes/conversations");
 // const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource route
 app.use("/api/users", usersRoutes(db));
+app.use("/api/lawyers", lawyersRoutes(db));
+app.use("/api/conversation", conversationRoutes(db));
+app.use("/api/questions", questionsRoutes(db));
+app.use("/api/conversations", conversationsRoutes(db));
 //app.use("/api/widgets", widgetsRoutes(db));
 
 // Homepage receive all quiz routes
