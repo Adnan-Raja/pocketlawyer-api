@@ -16,3 +16,11 @@ INSERT INTO lawyers (id, name, img, description, focus) VALUES (5, 'James Oliver
 INSERT INTO lawyers (id, name, img, description, focus) VALUES (6, 'Michael Ross', 'https://heroandvillainstyle.com/wp-content/uploads/2020/09/Mike-Ross-Slicked-Back-Hair-e1599847799376.jpg','If a company or individual is insolvent, it is a bankruptcy lawyers job to advise them about their eligibility for bankruptcy, prepare their legal paperwork, and represent them in bankruptcy court. These lawyers advise clients when to file for bankruptcy and what type of bankruptcy to pursue in the clients best interests. They also present their clients with legal alternatives to filing for bankruptcy, where such exists.','Bankruptcy Lawyer');
 INSERT INTO lawyers (id, name, img, description, focus) VALUES (7, 'Annalise Keating', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbb36OtJI_Xsyr-Z8S32EyCcS35GLaTYztDY4MftMEBtZYw4NUBnMYofz-ZYBNVI_JMEc&usqp=CAU','As a criminal lawyer, you can be a public defense attorney, private defense attorney, or prosecutor. Criminal lawyers represent clients who have been accused of a crime and assist them through the various stages of a criminal proceeding, including arrest, bail, arraignment, pleas, appeal, and sentencing.','Criminal Lawyer');
 
+
+-- 1, 'Harvey Specter' - 'Maritime Lawyer'
+-- 2, 'Jessica Pearson' - 'Contract Lawyer'
+-- 3, 'Michael Hua' - 'Injury Lawyer'
+-- 4, 'Louis Litt' - 'Civil Litigation Lawyer'
+-- 5, 'James Oliver' - 'Civil Rights Lawyer'
+-- 6, 'Michael Ross' - 'Bankruptcy Lawyer'
+-- 7, 'Annalise Keating' - 'Criminal Lawyer'
