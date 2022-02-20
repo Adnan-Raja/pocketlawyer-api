@@ -57,6 +57,7 @@ const lawyersRoutes = require("./routes/lawyers");
 const conversationRoutes = require("./routes/conversation");
 const questionsRoutes = require("./routes/questions");
 const conversationsRoutes = require("./routes/conversations");
+const searchResultRoutes = require("./routes/searchResult");
 // const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource route
@@ -65,6 +66,7 @@ app.use("/api/lawyers", lawyersRoutes(db));
 app.use("/api/conversation", conversationRoutes(db));
 app.use("/api/questions", questionsRoutes(db));
 app.use("/api/conversations", conversationsRoutes(db));
+app.use("/searchResult", searchResultRoutes(db));
 //app.use("/api/widgets", widgetsRoutes(db));
 
 // Homepage receive all quiz routes
