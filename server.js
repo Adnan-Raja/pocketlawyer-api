@@ -8,9 +8,16 @@ const sassMiddleware = require("./lib/sass-middleware");
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const cors = require('cors');
+
+
+//Cors
+app.use(cors());
 
 // Body parser
 const bodyParser = require('body-parser')
+
+app.use(express.json());
 
 // parse application/x-www-form-urlencoded
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -58,6 +65,8 @@ const conversationRoutes = require("./routes/conversation");
 const questionsRoutes = require("./routes/questions");
 const conversationsRoutes = require("./routes/conversations");
 const searchResultRoutes = require("./routes/searchResult");
+const registerRoutes = require("./routes/register");
+const loginRoutes = require("./routes/login");
 // const widgetsRoutes = require("./routes/widgets");
 
 // Mount all resource route
@@ -67,6 +76,8 @@ app.use("/api/conversation", conversationRoutes(db));
 app.use("/api/questions", questionsRoutes(db));
 app.use("/api/conversations", conversationsRoutes(db));
 app.use("/searchResult", searchResultRoutes(db));
+app.use("/register", registerRoutes(db));
+app.use("/login", loginRoutes(db));
 //app.use("/api/widgets", widgetsRoutes(db));
 
 // Homepage receive all quiz routes
